@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';]
+import { StaticQuery, graphql } from 'gatsby';
 
 import '../../static/css/normalize.css';
 import '../../static/scss/site.scss';
