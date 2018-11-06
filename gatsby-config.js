@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'gatsbywp.local',
+        baseUrl: 'p9react.local',
         protocol: 'http',
         hostingWPCOM: false,
         useACF: true,
