@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--base-col);
+}
+
+a {
+    color: var(--link-col);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+
+    &:hover {
+        color: var(--base-col);
+    }
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
