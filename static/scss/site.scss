@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-@import 'settings/settings.color';
+@import 'settings/settings.theme';
+
+@import 'tools/tools.utils-spacing.scss';
 
 @import 'layout/layout.base';
+
+// Only put components here if they appear througout the site
+// The less we add here the better
+@import 'components/component.header';
+@import 'components/component.burger';

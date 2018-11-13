@@ -1,0 +1,105 @@
+$values: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, em, auto;
+$directions: all, x, y, top, left, right, bottom;
+
+@each $direction in $directions {
+    @each $value in $values {
+        // All axis
+        @if $direction == 'all' {
+            @if $value == 'em' {
+                .u-spacing-em {
+                    margin: 1em;
+                }
+
+                .u-padding-em {
+                    padding: 1em;
+                }
+            }
+            @else {
+                .u-spacing-#{$value} {
+                    margin: #{$value}px;
+                }
+
+                .u-padding-#{$value} {
+                    padding: #{$value}px;
+                }
+            }
+        }
+        // X axis
+        @else if $direction == 'x' {
+            @if $value == 'em' {
+                .u-spacing-x-em {
+                    margin-left: 1em;
+                    margin-right: 1em;
+                }
+
+                .u-padding-x-em {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+            }
+            @else if $value == 'auto' {
+                .u-spacing-x-auto {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            @else {
+                .u-spacing-x-#{$value} {
+                    margin-left: #{$value}px;
+                    margin-right: #{$value}px;
+                }
+
+                .u-padding-x-#{$value} {
+                    padding-left: #{$value}px;
+                    padding-right: #{$value}px;
+                }
+            }
+        }
+        // Y axis
+        @else if $direction == 'y' {
+            @if $value == 'em' {
+                .u-spacing-y-em {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                }
+
+                .u-padding-y-em {
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                }
+            }
+            @else {
+                .u-spacing-y-#{$value} {
+                    margin-top: #{$value}px;
+                    margin-bottom: #{$value}px;
+                }
+
+                .u-padding-y-#{$value} {
+                    padding-top: #{$value}px;
+                    padding-bottom: #{$value}px;
+                }
+            }
+        }
+        // Direction specific
+        @else {
+            @if $value == 'em' {
+                .u-spacing-#{$direction}-em {
+                    margin-#{$direction}: 1em;
+                }
+
+                .u-padding-#{$direction}-em {
+                    padding-#{$direction}: 1em;
+                }
+            }
+            @else {
+                .u-spacing-#{$direction}-#{$value} {
+                    margin-#{$direction}: #{$value}px;
+                }
+
+                .u-padding-#{$direction}-#{$value} {
+                    padding-#{$direction}: #{$value}px;
+                }
+            }
+        }
+    }
+}

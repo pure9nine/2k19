@@ -1,0 +1,49 @@
+$filling-height: 2px;
+$filling-offset: 3;
+
+.burger {
+    position: relative;
+    cursor: pointer;
+}
+
+.burger__filling {
+    background: currentColor;
+    display: block;
+    width: 100%;
+    height: $filling-height;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease-in-out;
+
+    .burger--active & {
+        background-color: transparent
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        background: #fff;
+        width: 100%;
+        height: $filling-height;
+        position: absolute;
+        top: 0;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:before {
+        transform: translateY((-$filling-height) * $filling-offset);
+
+        .burger--active & {
+            transform: translateY(0) rotate(45deg);
+        }
+    }
+
+    &:after {
+        transform: translateY(($filling-height) * $filling-offset);
+
+        .burger--active & {
+            transform: translateY(0) rotate(-45deg);
+        }
+    }
+}
