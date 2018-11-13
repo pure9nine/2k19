@@ -8,7 +8,7 @@ import styles from './hero.module.scss';
 export default class HeroContainer extends Component {
     render() {
         return (
-            <div className={`${styles.hero} u-padding-x-30`}>
+            <div className={`${styles.hero} u-padding-x-50`}>
                 <div className={styles.heroInner}>
                     <div className={styles.heroVideo}>
                         <video autoPlay loop muted>
