@@ -27,11 +27,9 @@ export default class HeaderContainer extends Component {
         return (
             <header className="header u-padding-50">
                 <div className="header__inner">
-                    <div className="header__logo">
-                        <Link to="/">
-                            <Logo/>
-                        </Link>
-                    </div>
+                    <Link to="/" className="header__logo">
+                        <Logo/>
+                    </Link>
                     <div className="header__burger">
                         <Burger
                             onBurgerClick={this.handleBurgerClick}
