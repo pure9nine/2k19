@@ -25,7 +25,7 @@ export default class HeaderContainer extends Component {
 
     render() {
         return (
-            <header className="header u-padding-50">
+            <header className="header">
                 <div className="header__inner">
                     <Link to="/" className="header__logo">
                         <Logo/>

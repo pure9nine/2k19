@@ -6,4 +6,16 @@
     // Fonts
     --base-font: 'Roboto', sans-serif;
     --heading-font: 'Oswald', sans-serif;
+
+    // Dimenstions
+    --header-height: 150px;
+
+    // Spacing
+    --gutter-width: 15px;
+    @media (min-width: 321px) {
+        --gutter-width: 25px;
+    }
+    @media (min-width: 1025px) {
+        --gutter-width: 50px;
+    }
 }

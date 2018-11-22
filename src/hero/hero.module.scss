@@ -1,9 +1,13 @@
 .hero {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 var(--gutter-width);
+
+    @media (min-width: 641px) {
+        padding: 5% var(--gutter-width) 12%;
+    }
 }
 
 .heroInner {
@@ -33,4 +37,29 @@
 .heroMask {
     color: #fff;
     position: relative;
+}
+
+.heroTagline {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1.15;
+    letter-spacing: 1.2px;
+    padding: 40px 0 0 0;
+    position: relative;
+
+    @media (min-width: 1001px) {
+        padding: 0 0 0 35%;
+        font-size: 5rem;
+    }
+
+    &:before {
+        content: "";
+        background: var(--accent-col);
+        width: 32%;
+        height: 10px;
+        position: absolute;
+        top: 0.2em;
+        left: 0;
+    }
 }

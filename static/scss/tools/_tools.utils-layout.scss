@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+    margin: 0 auto;
+
+    .row {
+        margin-left: -(var(--gutter-width));
+        margin-right: -(var(--gutter-width));
+    }
+}
+
+.column {
+    flex: 1;
+    padding: 0 var(--gutter-width);
+}

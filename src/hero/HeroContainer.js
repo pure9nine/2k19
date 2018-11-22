@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import HeroMask from '../icons/HeroMask';
 
 import styles from './hero.module.scss';
-
 export default class HeroContainer extends Component {
-    render() {
+    renderHeroMask() {
         return (
-            <div className={`${styles.hero} u-padding-x-50`}>
+            <div className={styles.hero}>
                 <div className={styles.heroInner}>
                     <div className={styles.heroVideo}>
                         <video autoPlay loop muted>
@@ -19,6 +18,27 @@ export default class HeroContainer extends Component {
                         <HeroMask />
                     </span>
                 </div>
+            </div>
+        );
+    }
+
+    renderHeroTagline() {
+        return (
+            <div className="row">
+                <div className="column">
+                    <h2 className={styles.heroTagline}>
+                        Visual Design. UX/UI. Art Direction. production. motion. Strategy. Investor. <span className="u-heading-underlined">Freelance.</span>
+                    </h2>
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+        return (
+            <div>
+                {this.renderHeroMask()}
+                {this.renderHeroTagline()}
             </div>
         );
     }
