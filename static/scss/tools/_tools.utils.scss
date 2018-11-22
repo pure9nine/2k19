@@ -1,0 +1,15 @@
+.u-heading-underlined {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content: "";
+        background: var(--accent-col);
+        width: 106%;
+        height: 10px;
+        position: absolute;
+        left: -3%;
+        bottom: 0;
+        z-index: -1;
+    }
+}
