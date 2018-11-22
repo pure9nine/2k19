@@ -5,8 +5,8 @@
     margin: 0 auto;
 
     .row {
-        margin-left: -(var(--gutter-width));
-        margin-right: -(var(--gutter-width));
+        margin-left: calc(-1 * var(--gutter-width));
+        margin-right: calc(-1 * var(--gutter-width));
     }
 }
 
