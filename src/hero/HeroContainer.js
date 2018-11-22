@@ -24,12 +24,10 @@ export default class HeroContainer extends Component {
 
     renderHeroTagline() {
         return (
-            <div className="row">
-                <div className="row column">
-                    <h2 className={styles.heroTagline}>
-                        Visual Design. UX/UI. Art Direction. production. motion. Strategy. Investor. <span className="u-heading-underlined">Freelance.</span>
-                    </h2>
-                </div>
+            <div className="row u-spacing-bottom-150">
+                <h2 className={styles.heroTagline}>
+                    Visual Design. UX/UI. Art Direction. production. motion. Strategy. Investor. <span className="u-heading-underlined">Freelance.</span>
+                </h2>
             </div>
         );
     }

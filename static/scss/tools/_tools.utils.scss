@@ -13,3 +13,23 @@
         z-index: -1;
     }
 }
+
+.u-heading-bg {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content: "";
+        background: var(--accent-col-dark);
+        width: 106%;
+        height: 100%;
+        position: absolute;
+        top: 0.125em;
+        left: -3%;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+}

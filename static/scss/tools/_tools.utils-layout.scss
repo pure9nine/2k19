@@ -1,16 +1,28 @@
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1120px;
+    max-width: 1250px;
     margin: 0 auto;
+    padding: 0 var(--gutter-width);
 
     .row {
-        margin-left: calc(-1 * var(--gutter-width));
-        margin-right: calc(-1 * var(--gutter-width));
+        padding: 0;
+    }
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--space-between {
+        justify-content: space-between;
     }
 }
 
 .column {
     flex: 1;
     padding: 0 var(--gutter-width);
+
+    &.full-width {
+        width: 100%;
+        flex: 0 0 100%;
+    }
 }
