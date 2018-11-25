@@ -1,0 +1,51 @@
+.item {
+    flex: 0 0 100%;
+
+    @media (min-width: 769px) {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+.itemInner {
+    background: red;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 64%;
+}
+
+.itemInfo {
+    background: #fff;
+    width: calc(100% - 60px);
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+    padding: 25px;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    .itemInner:hover & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.itemTag {
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: #d8d8d8;
+}
+
+.itemTitle {
+    font-family: var(--heading-font);
+    font-size: 5rem;
+    line-height: 1.15;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--base-col);
+}
