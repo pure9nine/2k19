@@ -5,6 +5,7 @@
 @import 'settings/settings.z-index';
 
 @import 'tools/tools.utils';
+@import 'tools/tools.typography';
 @import 'tools/tools.utils-layout';
 @import 'tools/tools.utils-spacing.scss';
 
@@ -14,3 +15,4 @@
 // The less we add here the better
 @import 'components/component.header';
 @import 'components/component.burger';
+@import 'components/component.button';

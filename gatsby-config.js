@@ -14,7 +14,6 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         verboseOuput: true
-
       }
     }
   ],

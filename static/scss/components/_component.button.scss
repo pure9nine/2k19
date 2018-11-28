@@ -1,0 +1,17 @@
+.button {
+    background: var(--accent-col);
+    display: inline-block;
+    font-family: var(--heading-font);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.15rem;
+    padding: 20px 28px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background: var(--base-col);
+        color: #fff;
+    }
+}

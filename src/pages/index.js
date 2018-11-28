@@ -13,13 +13,20 @@ export default class IndexPage extends Component {
 		const data = this.props.data;
 
 		return (
-			<div className={`row row--flex row--space-between portfolio-wrap`}>
-				{data.allWordpressPost.edges.map(({ node, i }) => (
-					<PortfolioItemContainer
-						key={i}
-						item={node}
-					/>
-				))}
+			<div className="portfolio-wrap">
+				<div className="row row--flex row--space-between">
+					{data.allWordpressPost.edges.map(({ node, i }) => (
+						<PortfolioItemContainer
+							key={i}
+							item={node}
+						/>
+					))}
+				</div>
+				<div className="row u-spacing-top-80 u-spacing-bottom-160 u-text-center">
+					<Link to="" className="button">
+						<span>Browse projects</span>
+					</Link>
+				</div>
 			</div>
 		);
 	}
@@ -28,8 +35,8 @@ export default class IndexPage extends Component {
     	return (
       		<Layout>
         		<HeroContainer />
-				<AboutMeContainer />
-				{this.renderPortfolioItems()}
+					<AboutMeContainer />
+					{this.renderPortfolioItems()}
       		</Layout>
     	);
   	}
@@ -49,14 +56,21 @@ export const pageQuery = graphql`
       }
     }
     allWordpressPost(sort: { fields: [date] }) {
-      edges {
-        node {
-          title
-          excerpt
-		  slug
-		  status
-        }
-      }
+      	edges {
+        	node {
+          		title
+          		excerpt
+				slug
+				  status
+				  featured_media {
+					  source_url
+				  }
+				  acf {
+					  agency
+					  external_link
+				  }
+        	}
+      	}
     }
-  }
+}
 `
