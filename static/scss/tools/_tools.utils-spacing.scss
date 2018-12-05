@@ -1,4 +1,4 @@
-$values: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 100, 150, 160, em, auto;
+$values: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 100, 150, 160, 180, em, auto;
 $directions: all, x, y, top, left, right, bottom;
 
 @each $direction in $directions {

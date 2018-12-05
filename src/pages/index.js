@@ -6,6 +6,7 @@ import Layout from '../layouts/layout';
 
 import HeroContainer from '../hero/HeroContainer';
 import AboutMeContainer from '../about/AboutMeContainer';
+import WhyMeContainer from '../about/WhyMeContainer';
 import PortfolioItemContainer from '../browse/PortfolioItemContainer';
 
 export default class IndexPage extends Component {
@@ -35,8 +36,9 @@ export default class IndexPage extends Component {
     	return (
       		<Layout>
         		<HeroContainer />
-					<AboutMeContainer />
-					{this.renderPortfolioItems()}
+				<AboutMeContainer />
+				{this.renderPortfolioItems()}
+				<WhyMeContainer />
       		</Layout>
     	);
   	}

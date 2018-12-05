@@ -10,10 +10,18 @@
     &--flex {
         display: flex;
         flex-wrap: wrap;
+
+        > * {
+            flex: 1;
+        }
     }
 
     &--space-between {
         justify-content: space-between;
+    }
+
+    &--vertical-align {
+        align-items: center;
     }
 }
 

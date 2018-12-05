@@ -2,6 +2,11 @@
     display: inline-block;
     position: relative;
 
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
     &:after {
         content: "";
         background: var(--accent-col);
@@ -10,7 +15,7 @@
         position: absolute;
         left: -3%;
         bottom: 0;
-        z-index: -1;
+        z-index: 1;
     }
 }
 

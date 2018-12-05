@@ -26,7 +26,7 @@ export default class HeroContainer extends Component {
         return (
             <div className="row u-spacing-bottom-150">
                 <h2 className={styles.heroTagline}>
-                    Visual Design. UX/UI. Art Direction. production. motion. Strategy. Investor. <span className="u-heading-underlined">Freelance.</span>
+                    Visual Design. UX/UI. Art Direction. production. motion. Strategy. Investor. <span className="u-heading-underlined"><span>Freelance.</span></span>
                 </h2>
             </div>
         );
