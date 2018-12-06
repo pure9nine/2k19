@@ -1,4 +1,4 @@
-#Installation instructions
+# Installation instructions
 
 We'll be using GatsbyJS for the Front-end and Wordpress for the back-end. You'll need to make sure your Wordpress local server is running each time you want to view the front-end locally.
 
